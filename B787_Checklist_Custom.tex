@@ -1,0 +1,210 @@
+\documentclass[sim-use]{checklist}
+
+\logo{logo_white/cessna.png}
+\title{Normal Checklist}
+\subtitle{Boeing \\ B787-8/-9/-10}
+\version{Version: 1.0 \\ \today}
+%\makeatletter
+
+\begin{document}
+  
+
+\begin{checklist}{Preflight}
+  \item{Parking Brakes}{Set}
+  \item{Electrical: APU Generator}{Off}
+  \item{Electrical: APU Master}{Off}
+  \item{Landing Gear}{Down}
+  \item{Flaps Lever}{Up}
+  \item{Speedbrakes Lever}{Retracted}
+  \item{Fuel Controls}{Cutoff}
+  \item{Fuel Pumps}{Off}
+\end{checklist}
+
+\begin{checklist}{Before Startup}
+  \item{Electrical: Battery}{On}
+  \item{Electrical: Fwd Ext Pwr L/R}{On}
+  \condition{If Ext Pwr Unavail:}{
+    \item{Electrical: APU Master}{Start}
+    \item{Electrical: APU Gen L/R}{On}
+  }
+  \item{Panel Lights}{As Req}
+  \item{IRS L/R}{On}
+  \item{FD Door Power}{On}
+  \item{Emer Lights}{Armed}
+  \item{Seatbelts Signs}{On}
+  \item{NAV Lights}{On}
+  \item{Logo Lights}{On}
+  \item{Wing Lights}{As Req}
+  \item{Air Conditioning: L/R Pack}{Auto}
+  \item{Air Conditioning: Trim Air L/R}{On}
+  \item{Air Conditioning: Upper Recirc}{On}
+  \item{Wing / Engine L/R Anti-Ice}{Auto}
+  \item{Window Heat: Primary L/R}{On}
+  \item{CDU}{Setup}
+  \item{IFR Clearance}{Received}
+  \item{Altimeter}{\blank QNH / \blank.\blank inHg}
+  \item{Squawk}{Set}
+\end{checklist}
+
+\begin{checklist}{Startup}
+  \item{Windows \& Doors}{Closed and Locked}
+  \item{Fuel Quantity}{Check}
+  \item{Fuel: L/R Fwd/Aft Pumps}{On}
+  \item{Fuel: L/R Ctr Pumps}{As Req}
+  \item{Electrical: APU Master}{Start}
+  \item{Electrical: APU Gen L/R}{On}
+  \item{Beacon Lights}{On}
+  \item{Pushback Clearance}{Received}
+  \item{Parking Brake}{Off}
+  \item{Throttle}{Idle}
+  \item{Engine Start L/R}{Start}
+  \item{Fuel Controls L/R}{Run}
+  \item{Electrical: Ctrl L1/L2/R1/R2}{Confirm On}
+  \item{Electrical: APU Master}{Off}
+  \item{Electrical: Ext Power}{Off}
+  \item{Hydraulic: L/R Primary}{On}
+  \item{Hydraulic: Elec C1/C2}{Auto}
+  \item{Hydraulic: L/R Demand}{Auto}
+\end{checklist}
+
+\begin{checklist}{Before Taxi}
+  \item{Parking Brakes}{Set}
+  \item{Transponder}{TA Only}
+  \item{Flaps}{Set}
+  \item{Trim}{Set}
+  \item{Autobrake}{RTO Set}
+  \item{Taxi Lights}{On}
+  \item{Runway Turn-off Lights}{On}
+  \item{Taxi Clearance}{Received}
+\end{checklist}
+
+\begin{checklist}{Taxi}
+  \item{Parking Brakes}{Off}
+  \item{MCP: F/D}{On}
+  \item{MCP}{V1 \blank, Hdg \blank, Alt \blank}
+  \item{MCP: LNAV}{Arm as Req}
+  \item{MCP: VNAV}{Arm as Req}
+  \item{MCP: L/R A/T Arm}{Armed}
+\end{checklist}
+
+\begin{checklist}{Before Takeoff}
+  \item{Transponder}{TA/RA}
+  \item{MFD: TFC}{On}
+  \item{MFD: TERR}{On}
+  \item{Speedbrake}{Retracted}
+  \item{Instrument}{Check}
+  \item{Flaps}{Confirm Set}
+  \item{Landing Lights}{On}
+  \item{Strobe Lights}{On}
+  \item{FMA: Confirm TOGA-TOGA}{Confirmed}
+  \item{Cabin Crew}{Notified}
+\end{checklist}
+
+\begin{checklist}{Takeoff}
+  \item{Parking Brakes}{Off}
+  \item{Engines}{Stabilize at 30\% TPR}
+  \item{TOGA}{On before 50kts}
+  \item{FMA: A/T mode THR REF}{Check}
+  \item{FMA: A/T mode HOLD at 80kts}{Check}
+\end{checklist}
+
+\begin{checklist}{Climb}
+  \item{Gear}{Retracted}
+  \item{Flaps}{Retracted}
+  \item{Autopilot}{As Req}
+  \item{Autobrake}{Off}
+  \item{Taxi / Rwy Turn-off Lights}{Off}
+  \condition{Above 10000ft:}{
+    \item{Landing Lights}{Off}
+    \item{Wing Lights}{Off}
+    \item{Seatbelt Signs}{As Req}
+  }
+\end{checklist}
+
+\begin{checklist}{Cruise}
+  \item{Altimeter}{Std}
+  \item{Seatbelt Signs}{As Req}
+\end{checklist}
+
+\begin{checklist}{Descent}
+  \item{MCP: Altitude}{Set Lower as Req}
+  \item{Altimeter (at Trans Alt)}{\blank QNH / \blank.\blank inHg}
+  \item{Approach Min}{Set}
+  \item{CDU: Approach Ref}{Set}
+  \condition{Below 10000ft:}{
+    \item{Seatbelt Signs}{On}
+    \item{Landing Lights}{On}
+    \item{Wing Lights}{On}
+  }
+\end{checklist}
+
+\begin{checklist}{Approach}
+  \item{Landing Lights}{On}
+  \item{Altimeter}{Set}
+  \item{MCP: Altitude}{Set for Missed App}
+  \item{MCP: Speed}{VRef + 5}
+  \item{MCP: Approach}{Arm as Req}
+  \item{Autobrake}{Set as Req}
+  \item{Landing Gear}{Down}
+  \item{Flaps}{Set for Landing}
+  \item{Speedbrake}{Armed} 
+\end{checklist}
+
+\begin{checklist}{Landing}
+  \item{Auto-Throttle (500ft AGL)}{Off}
+  \item{Auto-Pilot (300ft AGL)}{Disconnect}
+  \condition{On touchdown:}{
+    \item{Reverse Thrust}{Engage}
+    \item{Speedbrake}{Up Full}
+  }
+  \condition{Below 70KIAS:}{
+    \item{Reverse Thrust}{Disengage}
+    \item{Autobrake}{Off}
+  }
+\end{checklist}
+
+\begin{checklist}{After Landing}
+  \item{Landing Lights}{Off}
+  \item{Strobe Lights}{Off}
+  \item{Taxi / Rwy Turn-off Lights}{On}
+  \item{Autobrake}{Off}
+  \item{Flaps}{Up}
+  \item{Speedbrake}{Retracted}
+  \item{Anti-Ice}{Off}
+  \item{MCP: F/D}{Off}
+  \item{Electrical: APU Master}{Start}
+  \item{Electrical: APU Gen L/R}{On}
+\end{checklist}
+
+\begin{checklist}{Parking}
+  \item{Parking Brakes}{Set}
+  \item{Taxi / Rwy Turn-off Lights}{Off}
+  \item{Electrical: Engine Generators}{Off}
+  \item{Fuel Control L/R}{Cutoff}
+  \item{Fuel Pumps}{Off}
+  \item{Beacon Lights}{Off}
+  \item{Seatbelt Signs}{Off}
+  \condition{If Ext Pwr Avail:}{
+    \item{Electrical: Fwd Ext Pwr L/R}{On}
+    \item{Electrical: APU Master}{Off}
+     \item{Electrical: APU Gen L/R}{Off}
+  }
+\end{checklist}
+
+\begin{checklist}{Shutdown}
+  \item{Pressurization}{Off}
+  \item{Air Conditioning: Packs}{Off}
+  \item{Air Conditioning: Trim Air}{Off}
+  \item{Air Conditioning: Upper Recirc}{Off}
+  \item{Air Conditioning: Equip Cooling}{Off}
+  \item{Window Heating}{Off}
+  \item{IRS L/R}{Off}
+  \item{Hydraulic: L/R Primary}{Off}
+  \item{Hydraulic: Elec C1/C2}{Off}
+  \item{Hydraulic: L/R Demand}{Off}
+  \item{Interior Lights}{Off}
+  \item{External Power}{Off}
+  \item{Battery}{Off}
+\end{checklist}
+
+\end{document}
