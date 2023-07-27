@@ -2,3 +2,7 @@
 *.aux
 *.log
 *.pdf
+*.bbl
+*.synctex.gz
+*.fls
+*.fdb_latexmk
