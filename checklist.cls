@@ -40,7 +40,7 @@
 \setlength{\headheight}{1.7in}
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{0pt}
-\fancyfoot[L]{For simulation use only}
+\fancyfoot[L]{\ifthenelse{\boolean{sim-use}}{For simulation use only}{}}
 \fancyhead[C]{%
     % \setlength{\extrarowheight}{0.6in}   % use \rule to specific row height instead
     \newcolumntype{C}{>{\centering\arraybackslash}m}
@@ -70,12 +70,15 @@
 
 % Checklist environment for each section
 \newenvironment{checklist}[1]{%
+    \newcommand{\indentspace}{0em}
     \renewcommand{\item}[2]{%
-        ##1\,\dotfill\,\uppercase{##2} \\
+        \hspace*{\indentspace}##1\,\dotfill\,\uppercase{##2} \\
     }
 
     \newcommand{\condition}[2]{%
+        \renewcommand{\indentspace}{1.5em}
         \textit{##1} \\ ##2
+        \renewcommand{\indentspace}{0em}
     }
 
     \begin{tcolorbox}[title=\uppercase{#1}]
