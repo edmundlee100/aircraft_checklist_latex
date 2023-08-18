@@ -1,0 +1,203 @@
+\documentclass[sim-use]{checklist}
+
+\logo{logo_white/bombardier.png}
+\title{Normal Checklist}
+\subtitle{Bombardier \\ CRJ700/900/1000}
+\version{Version: 1.0 \\ \today}
+
+\begin{document}
+
+\begin{checklist}{Preflight}
+    \item{Parking Brakes}{On}
+    \item{N/W Steering}{Off}
+    \item{Hydraulic Pumps}{Off}
+    \item{Landing Gear Lever}{Down}
+    \item{Flight Spoiler}{Retracted}
+    \item{Flaps}{Up}
+    \item{Radar}{Off}
+    \item{ADG Manual Release}{Stowed}
+    \item{Emergency Flap}{Normal}
+\end{checklist}
+
+\begin{checklist}{Cockpit Preparation}
+    \condition{Electircal Power Panel:}{
+        \item{Battery Master}{On}
+        \item{AC Electrics}{On}
+        \item{DC Service}{Off}
+        \item{IDG Disc 1/2}{Guarded}
+        \item{Gen 1/2/APU}{Auto}
+    }
+    \condition{If Ext Pwr Unavail:}{
+        \item{APU Pwr Fuel}{On}
+        \item{APU}{Start}
+    }
+    \item{IRS}{Nav}
+    \condition{External Lights Panel:}{
+        \item{NAV}{On}
+        \item{Logo}{On}
+    }
+    % \condition{Fuel Panel:}{
+    %     \item{L/R Fuel Pumps}{Off}
+    % }
+    % \condition{Bleed Air Panel:}{
+    %     \item{Wing A/I Cross Bleed}{Normal}
+    %     \item{Bleed Valves}{Auto}
+    %     \item{ISOL}{Closed}
+    %     \item{Bleed Source}{Both Eng}
+    % }
+    \condition{Hydraulic Panel:}{
+        \item{Pump 1, 3B and 2}{Auto}
+        \item{Pump 3A}{On}
+    }
+    \condition{Air Conditioning Panel:}{
+        \item{L/R Pack}{Auto}
+        \item{Recirc Fan}{On}
+        \item{Aft Cargo}{On}
+    }
+    \condition{Anti-Ice Panel:}{
+        \item{Wing Anti-Ice}{Off}
+        \item{Cowl Anti-Ice}{Off}
+        \item{LH/RH WSHLD}{Low}
+        \item{Probes}{As Req}
+    }
+    \item{ELT Switch}{Armed}
+    \item{Emer Lights}{Armed}
+    \item{Seat Belts Sign}{On}
+    \item{No Smoking Sign}{On}
+    \item{FMS Initialization}{Completed}
+    \item{IFR Clearance}{Received}
+    \item{Takeoff Speeds}{V1 \blank, VR \blank, V2 \blank}
+    \item{Ldg Elev}{Set}
+    \item{Altimeter}{\blank QNH / \blank.\blank inHg}
+\end{checklist}
+
+\begin{checklist}{Engine Start}
+    \item{Doors}{Closed and Locked}
+    \item{APU Pwr Fuel}{On}
+    \item{APU}{Start}
+    \item{Beacon}{On}
+    \item{Fuel Pumps}{On}
+    \item{Hydraulic Pumps}{Auto/On}
+    \condition{If Require Pushback:}{
+        \item{Wheelchocks}{Removed}
+        \item{Parking Brake}{Off}
+    }
+    \item{Right Engine}{Start}
+    \item{Right Thrust Lever (at 20\% N2)}{Idle}
+    \item{Left Engine}{Start}
+    \item{Left Thrust Lever (at 20\% N2)}{Idle}
+    \item{Gen 1/2}{Auto}
+    \item{Bleed Valves}{Auto}
+    \item{Air Conditioning Packs}{On}
+    \item{Anti-Ice}{As Req}
+    \item{Probes Heat}{On}
+    \item{APU}{Stop}
+    \item{APU Pwr Fuel}{Off}
+    \item{Stab Trim}{Engage}
+    \item{Mach Trim}{Engage}
+    \item{Yaw Damper}{Engage}
+\end{checklist}
+
+\begin{checklist}{Before Taxi}
+    \item{N/W Steering}{Armed}
+    \item{Flaps}{Set T/O}
+    \item{Flt Ctrl}{Checked}
+    \item{Trim}{Set}
+    \item{Thrust Reversers}{Armed}
+    \item{Flight Instruments}{Checked}
+    \item{Taxi Lights}{On}
+    \item{Wheelchocks}{Removed}
+    \item{Parking Brakes}{Off}
+\end{checklist}
+
+\begin{checklist}{Before Takeoff}
+    \item{Landing Lights}{On}
+    \item{Strobe Lights}{On}
+    \item{Fuel XFLOW}{Manual}
+    \item{Anti-Ice}{As Req}
+    \item{Continuous Ignition}{As Req}
+    \item{Transponder}{Set to 1}
+    \item{Wx / Terrain Radar}{As Req}
+    \item{Flt Dir}{On}
+    \item{NAV / VNAV}{As Req}
+\end{checklist}
+
+\begin{checklist}{Climb}
+    \item{Climb Thrust}{Strobe}
+    \item{Fuel XFLOW}{Auto}
+    \item{Taxi Light}{Off}
+    \item{Thrust Reversers}{Off}
+    \condition{Above 10000ft:}{
+        \item{Landing Lights}{Off}
+        \item{Wing Lights}{Off}
+        \item{Seatbelt Signs}{As Req}
+    }
+\end{checklist}
+
+\begin{checklist}{Cruise}
+    \item{Speed}{Monitor}
+    \item{Altimeter}{Std}
+    \item{Seatbelt Signs}{As Req}
+\end{checklist}  
+
+\begin{checklist}{Descent}
+    \item{Ldg Elev}{Set}
+    \item{TCAS}{Below}
+    \item{Wx / Terrain Radar}{As Req}
+    \item{Decision Height}{Set}
+    \item{Landing Speeds}{Set}
+\end{checklist}
+
+\begin{checklist}{Approach}
+    \item{Altimeters}{\blank QNH / \blank.\blank inHg}
+    \item{Landing Lights}{On}
+    \item{Seatbelt Signs}{On}
+    \item{Thrust Reversers}{Armed}
+    \item{Landing Gear}{Down}
+    \item{Flaps}{Set}
+\end{checklist}
+
+\begin{checklist}{After Landing}
+    \item{Landing / Strobe Lights}{Off}
+    \item{Taxi Lights}{On}
+    \item{Flaps}{Up}
+    \item{Spoilers}{Retracted}
+    \item{Transpoder}{Stby}
+    \item{Wx Radar / Terrain Display}{Off}
+    \item{Probe Heat}{Off}
+    \item{APU Pwr Fuel}{On}
+    \item{APU}{Start}
+\end{checklist}
+
+\begin{checklist}{Parking}
+    \item{Parking Brake}{Set}
+    \item{Taxi Lights}{Off}
+    \item{Wheelchocks}{As Req}
+    \item{Thrust Lever}{Shut off}
+    \item{Fuel Pumps}{Off}
+    \item{Beacon}{Off}
+    \item{Seatbelt Signs}{Off}
+    \item{Anti-Ice}{Off}
+    \item{N/W Steering}{Off}
+    \condition{If Ext Pwr Avail:}{
+        \item{APU}{Stop}
+        \item{APU Pwr Fuel}{Off}
+    }
+\end{checklist}
+
+\begin{checklist}{Shutdown} 
+    \item{IRS}{Off}
+    \item{Emergency Lights}{Off}
+    \item{WSHLD Anti-Ice}{Off}
+    \item{Aft Cargo}{Off}
+    \item{Hydraulics}{Off}
+    \item{External Lights}{Off}
+    \item{APU Start/Stop}{Off}
+    \item{APU Pwr Fuel}{Off}
+    \item{DC Service}{Off}
+    \item{Battery Master}{Off}
+    \item{Dome Light}{Off}
+    \item{Boarding Lights}{Off}
+\end{checklist}
+
+\end{document}
