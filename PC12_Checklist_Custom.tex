@@ -1,0 +1,168 @@
+\documentclass[sim-use]{checklist}
+
+\logo{logo_white/pilatus.png}
+\title{Normal Checklist}
+\subtitle{Pilatus \\ PC-12/47}
+\version{Version: 1.0 \\ \today}
+%\makeatletter
+
+\begin{document}
+  
+
+\begin{checklist}{Preflight}
+  \item{Landing Gear Handle}{Down}
+  \item{Circut Breakers}{In}
+  \item{Batt Switch}{Off}
+  \item{Non-Esntl Bus Switch}{Auto}
+  \item{Stby Bus Switch}{On}
+  \item{Batt Switch}{On}
+  \item{Batt Volts}{>24V}
+  \item{Non-Esntl Bus Switch}{Ovrd}
+  \item{External Lights}{On/Check/Off}
+  \item{Non-Esntl Bus Switch}{Auto}
+  \item{Fuel Quantity}{Reset}
+  \item{Passenger Oxygen}{Auto}
+  \item{Batt Switch}{Off}
+  \item{Oxygen Supply Handle}{On}
+\end{checklist}
+
+\begin{checklist}{Before Start}
+  \item{Control Wheel Lock}{Remove}
+  \item{Parking Brake}{Set}
+  \item{Stby Bus}{On}
+  \item{Inert Sep}{Open}
+  \item{Cooling/Heating}{Off}
+  \item{Seatbelts/No-Smoking Signs}{On}
+  \item{EPS Switch}{Test/Armed}
+  \item{ECS Switch}{Off}
+  \item{MOR/PCL/Cond Lever}{Back}
+  \item{Batt Switch}{On}
+  \item{External Power}{As Req}
+  \item{Fuel Quantity \& Totalizer}{Checked \& Reset}
+  \item{Landing Gear}{3 Green}
+  \item{CAWS}{Appropriate}
+\end{checklist}
+  
+\begin{checklist}{Engine Start}
+  \item{Beacon Light}{On}
+  \item{Starter Switch}{Engaged}
+  \condition{When NG >13\%:}{
+    \item{Cond Lever}{Ground Idle}
+  }
+\end{checklist}
+
+\begin{checklist}{After Start}
+  \item{Generators}{1/2 On}
+  \item{Ext Power}{Off}
+  \item{Avionics}{1/2 On}
+  \item{Stby Bus}{Off}
+  \item{Cooling/Heating}{As Req}
+  \item{EPS Light}{Out}
+  \item{ECS Switch}{Auto}
+  \item{Flaps}{15 Deg}
+\end{checklist}
+
+\begin{checklist}{Before Taxi}
+  \item{Inverter}{Switch if First Flt}
+  \item{Pusher Test}{Complete}
+  \item{Avionics}{Set}
+  \item{Autopilot/Trim Test}{Complete}
+  \item{Cabin Pressure Controller}{Set}
+  \item{Transponder}{Set}
+  \item{Altitude Pre-Select}{Set \& Armed}
+  \item{Heading Bug}{Set \& Armed}
+  \item{AHRS 1/2}{Checked}
+  \item{CAWS}{Appropriate}
+  \item{Taxi Lights}{On}
+  \item{Probe Heat}{On}
+\end{checklist}
+
+\begin{checklist}{Taxi}
+  \item{Flight Controls}{Free \& Correct}
+  \item{Flight Instrument}{Check \& Set}
+  \item{Flight Director}{Go Around}
+  \item{Electric Trim}{Set for T/O}
+  \item{EGPWS}{Test}
+\end{checklist}
+
+\begin{checklist}{Before Takeoff}
+  \item{Flaps}{15 / 30 Deg}
+  \item{Landing/Strobes/Recog Lights}{On}
+  \item{Ice Protection}{As Req}
+  \item{Cond Lever}{Flight Idle}
+  \item{CAWS}{Appropriate}
+\end{checklist}
+
+\begin{checklist}{Takeoff}
+  \item{T/O Power Set}{Trq 43.3 PSI}
+  \item{At 80kts}{Rotate}
+\end{checklist}
+
+\begin{checklist}{After Takeoff}
+  \item{Landing Gear}{Up}
+  \item{Yaw Damper}{On}
+  \item{Landing \& Taxi Lights}{Off}
+  \item{Flaps (above 400' and 100kts)}{Up}
+  \item{Climb Power}{Trq 36.9 PSI / <750C ITT}
+  \item{Pressurization}{Check}
+  \item{Climb Rate}{+1200-1500 fpm / >150kts}
+  \condition{Above 10000ft:}{
+    \item{Inert Sep}{Close}
+    \item{Recog Lights}{Off}
+  }
+\end{checklist}
+
+\begin{checklist}{Cruise}
+  \item{Altimeters}{Std As Req}
+  \item{Cruise Power}{Set}
+  \item{Fuel}{Sufficient \& Balanced}
+  \item{Cabin Pressure}{Stable}
+  \item{Cabin Temperature}{Appropriate}
+\end{checklist}
+
+\begin{checklist}{Descent}
+  \item{Cabin Pressure \& Rate}{Set}
+  \item{Descent Rate}{-1200 fpm}
+\end{checklist}
+
+\begin{checklist}{Approach}
+  \item{Recog Lights}{On}
+  \item{Radio \& Navaids}{Set}
+  \item{Altimeters}{Set}
+  \item{Pressurization}{Set}
+  \item{Inert Sep}{Open}
+\end{checklist}
+
+\begin{checklist}{Before Landing}
+  \item{Landing Gear}{3 Green}
+  \item{Landing \& Taxi Lights}{On}
+  \item{Flaps}{As Req}
+  \item{Autopilot \& Yaw Damper}{Off}
+  \item{Cabin Pressurization}{0 Diff Pressure}
+\end{checklist}
+
+\begin{checklist}{After Landing}
+  \item{Cond Lever}{Ground Idle}
+  \item{Flaps}{Up}
+  \item{Exterior Lights}{As Req}
+  \item{Ice Protection}{Off}
+  \item{Trim}{Set for T/O}
+\end{checklist}
+
+\begin{checklist}{Shutdown}
+  \item{Parking Brake}{Set}
+  \item{ECS}{Off}
+  \item{Taxi Light}{Off}
+  \item{Transponder}{Off}
+  \item{Cooling/Heating}{Off}
+  \item{Avionics}{2/1 Off}
+  \item{Generators}{2/1 Off}
+  \item{Cond Lever}{Cutoff}
+  \item{Beacon}{Off}
+  \item{EPS Switch}{Off}
+  \item{Control Wheel Lock}{Installed}
+  \item{Battery Switch}{Off (NG <10\%)}
+  \item{Oxygen}{Off if Last Flt}
+\end{checklist}
+
+\end{document}
