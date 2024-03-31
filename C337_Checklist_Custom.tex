@@ -1,0 +1,123 @@
+\documentclass[sim-use]{checklist}
+
+\logo{logo_white/cessna.png}
+\title{Normal Checklist}
+\subtitle{Cessna \\ C337H Skymaster}
+\version{Version: 1.0 \\ \today}
+%\makeatletter
+
+\begin{document}
+  
+
+\begin{checklist}{Before Start}
+  \item{Door}{Closed}
+  \item{Seats \& Belts}{Adjust \& Lock}
+  \condition{Fuel Selectors:}{
+    \item{Front Engine}{Left Main}
+    \item{Rear Engine}{Right Main}
+  }
+  \item{Avionics}{Off}
+  \item{Battery \& Alternators}{On}
+  \item{Nav Lights}{On}
+  \item{Cowl Flaps}{Open}
+\end{checklist}
+  
+\begin{checklist}{Engine Start}
+  \item{Beacon Light}{On}
+  \item{Brakes}{Set}
+  \item{Mixture}{Rich}
+  \item{Propellers}{High RPM}
+  \item{Throttle}{Full Open}
+  \item{Aux Fuel Pumps}{Low to 60 lbs/hr, Off}
+  \item{Throttle}{Cracked 1/4 in}
+  \item{Ignition}{Start}
+  \item{Throttle}{800-1000 RPM}
+  \item{Oil Pressure}{Check}
+\end{checklist}
+
+\begin{checklist}{Before Taxi}
+  \item{Avionics}{On}
+  \item{Radios/Transponder}{Set}
+  \item{Altimeter}{Set}
+  \item{Flight Control}{Free \& Correct}
+  \item{Trim}{Set Takeoff}
+  \item{Taxi Lights}{On}
+\end{checklist}
+
+\begin{checklist}{Engine Runup}
+  \item{Parking Brake}{Set}
+  \item{Cowl Flaps}{Open}
+  \item{Propeller Sync}{Off}
+  \item{Mixture}{Rich}
+  \item{Propellers}{High RPM}
+  \item{Throttle}{1800 RPM}
+  \condition{Magneto Check:}{
+    \item{}{150 RPM max drop}
+    \item{}{50 RPM max diff b/t mags}
+  }
+  \item{Propeller}{Retard to 1200 RPM, then Full}
+  \item{Alternators}{Check}
+  \item{Suction}{4.6 -- 5.4 inHg}
+  \item{Throttle}{Idle}
+\end{checklist}
+
+\begin{checklist}{Before Takeoff}
+  \item{Flaps}{1/3 down}
+  \item{Transponder}{Alt}
+  \item{Pitot Heat}{As Req}
+  \item{Doors \& Windows}{Locked}
+  \item{Landing Lights}{On}
+  \item{Strobe Lights}{On}
+  \condition{Speeds:}{
+    \item{Rotation}{65 -- 70 KIAS}
+    \item{$V_X$ (Best angle of climb)}{75 -- 79 KIAS}
+    \item{$V_Y$ (Best rate of climb)}{96 KIAS}
+    \item{Cruise Climb}{110 -- 120 KIAS}
+  }
+\end{checklist}
+
+\begin{checklist}{Climb}
+  \item{Landing Gear}{Up}
+  \item{Flaps}{Up}
+  \item{Taxi Lights}{Off}
+  \item{Cowl Flaps}{As Req / Closed}
+  \condition{Max Performance Climb:}{
+    \item{}{96 KIAS --- Full Throttle --- 2800 RPM}
+    \item{}{Lean per Fuel Flow Placard}
+  }
+  \condition{Normal Climb:}{
+    \item{}{110 -- 120 KIAS --- 24 inHg --- 2600 RPM}
+    \item{}{Lean for 78 lbs/hr Fuel Flow}
+  }
+\end{checklist}
+
+\begin{checklist}{Approach}
+  \item{Cowl Flaps}{Closed}
+  \item{Landing Lights}{On}
+  \item{Altimeter}{Set}
+  \item{Mixture}{Rich}
+  \item{Propeller}{High RPM}
+  \item{Flaps}{2/3 or Full}
+  \item{Landing Gear}{Down \& 3 Green}
+  \item{$V_{app}$ Full Flaps}{75 -- 80 KIAS}
+\end{checklist}
+
+\begin{checklist}{After Landing}
+  \item{Strobes}{Off}
+  \item{Taxi Lights}{On}
+  \item{Landing Lights}{Off}
+  \item{Flaps}{Up}
+  \item{Cowl Flaps}{Open}
+\end{checklist}
+
+\begin{checklist}{Shutdown}
+  \item{Parking Brake}{Set}
+  \item{Throttle}{Idle}
+  \item{Mixture}{Idle Cutoff}
+  \item{Avionics}{Off}
+  \item{Ignition}{Off}
+  \item{Lights}{Off}
+  \item{Battery \& Alternators}{Off}
+\end{checklist}
+
+\end{document}
