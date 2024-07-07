@@ -20,6 +20,7 @@
 \RequirePackage{setspace}
 \RequirePackage{svg}
 \RequirePackage{xcolor}
+\RequirePackage{ragged2e}
 
 \definecolor{customblack}{gray}{0.15}
 \newcommand{\blank}{\underline{\hspace{5mm}}}    % underlined empty space
@@ -41,6 +42,7 @@
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{0pt}
 \fancyfoot[L]{\ifthenelse{\boolean{sim-use}}{For simulation use only}{}}
+\fancyfoot[R]{\color{blue}Blue Items: Only necessary for the first or last flight\\of the day or after maintenance action}
 \fancyhead[C]{%
     % \setlength{\extrarowheight}{0.6in}   % use \rule to specific row height instead
     \newcolumntype{C}{>{\centering\arraybackslash}m}
@@ -67,24 +69,64 @@
     fonttitle=\bfseries\large, halign title=center, 
     boxsep=0mm, toptitle=3mm, bottomtitle=3mm, top=4mm, bottom=4mm}
 
+\newboolean{customcasing}
+\newboolean{specialitem}
+\setboolean{customcasing}{false}
+\setboolean{specialitem}{false}
 
 % Checklist environment for each section
 \newenvironment{checklist}[1]{%
-    \newcommand{\indentspace}{0em}
-    \renewcommand{\item}[2]{%
-        \hspace*{\indentspace}##1\,\dotfill\,\uppercase{##2} \\
-    }
-
-    \newcommand{\condition}[2]{%
-        \renewcommand{\indentspace}{1.5em}
-        \textit{##1} \\ ##2
-        \renewcommand{\indentspace}{0em}
-    }
-
     \begin{tcolorbox}[title=\uppercase{#1}]
     \setstretch{1.1}
-}{%
-    \vspace*{-\baselineskip}
+    \begin{_checklist_internal}
+}{
+    \end{_checklist_internal}
     \end{tcolorbox}
 }
 
+\newenvironment{continuedchecklist}{%
+    \begin{tcolorbox}[]
+    \setstretch{1.1}
+    \begin{_checklist_internal}
+}{
+    \end{_checklist_internal}
+    \end{tcolorbox}
+}
+    
+\newenvironment{_checklist_internal}{%
+    \newcommand{\indentinternal}{\hspace{0em}}
+    \setboolean{customcasing}{false}
+    \setboolean{specialitem}{false}
+    \newcommand{\casinginternal}[1]{\ifthenelse{\boolean{customcasing}}{##1}{\uppercase{##1}}}
+    \newcommand{\specialinternal}{\ifthenelse{\boolean{specialitem}}{\color{blue}}{}}
+    
+    \renewcommand{\item}[2]{%
+        {\specialinternal \indentinternal \RaggedRight ##1\,\dotfill\,\RaggedLeft \casinginternal{##2} \newline}
+    }
+    \newcommand{\itemcustcase}[2]{%
+        \setbool{customcasing}{true}
+        \item{##1}{##2}
+        \setbool{customcasing}{false}
+    }
+    \newcommand{\specialitem}[2]{%
+        \setbool{specialitem}{true}
+        \item{##1}{##2}
+        \setbool{specialitem}{false}
+    }
+    \newcommand{\specialitemcustcase}[2]{%
+        \setbool{customcasing}{true}
+        \setbool{specialitem}{true}
+        \item{##1}{##2}
+        \setbool{specialitem}{false}
+        \setbool{customcasing}{false}
+    }
+	\renewcommand{\line}{\rule{\textwidth}{0.5pt}\vspace{1.3ex} \newline}
+
+    \newcommand{\condition}[2]{%
+        \renewcommand{\indentinternal}{\hspace{1.5em}}
+        \renewcommand{\\}{\newline\indentinternal}
+        \RaggedRight \textit{##1} \newline ##2
+        \renewcommand{\\}{\newline}
+        \renewcommand{\indentinternal}{\hspace{0em}}
+    }
+}{}
