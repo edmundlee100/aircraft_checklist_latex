@@ -1,0 +1,310 @@
+\documentclass[sim-use]{checklist}
+\usepackage{amssymb}
+
+\logo{logo_white/beechcraft.png}
+\title{Normal Checklist}
+\subtitle{Beechcraft \\ B60 Duke Turbine}
+\version{Version: 1.0 \\ \today}
+%\makeatletter
+
+\begin{document}
+
+\begin{checklist}{Preflight}
+  \item{Preflight Inspection}{Complete}
+  \item{Control Locks}{Removed}
+  \item{Seats \& Seatbelts}{Secure}
+  \item{Cabin Door}{Latched}
+  \item{Nose Baggage Door}{Latched}
+  \item{Parking Brake}{Set}
+  \item{Landing Gear}{Down}
+  \item{Electrical Switches}{Off}
+  \item{Engine \& Avionics Switches}{Off}
+  \item{Oxygen Pressure}{1500--1850 psi}
+  \item{Circuit Breakers}{All In}
+  \item{Supplemental Bleed Air}{Off (Push)}
+  \item{Cabin Press Shutoff}{Open (Push)}
+  \item{Alternate Static Air}{Normal}
+  \item{CO Detector}{Test}
+  \item{Environmental Mode}{Off}
+  \item{Flaps}{Up}
+  \item{Power Levers}{Flight Idle}
+  \item{Propellers}{High RPM}
+  \item{Condition Levers}{Cut-Off}
+  \item{Trim}{Centered}
+  \item{Fuel Selectors}{On}
+\end{checklist}
+  
+\begin{checklist}{Before Start}
+  \item{Beacon Light}{On}
+  \item{Battery Master}{On}
+  \item{Fuel Quantities}{Check}
+  \item{Annunciators}{Test \& Consider}
+  \condition{Battery Selector:}{
+    \item{Select \#1}{Bus Volts 23V Min}
+    \item{Select \#2}{Bus Volts 23V Min}
+    \item{Selector}{On Both}
+  }
+  \item{L Ignition}{Check Auto then On}
+  \item{R Ignition}{Check Auto then On}
+\end{checklist}
+\begin{checklist}{}
+  \item{L Wing Pump}{Check then Off}
+  \item{R Wing Pump}{Check then Off}
+  \item{L Aux Pump}{Check then Off}
+  \item{R Aux Pump}{Check then Off}
+\end{checklist}
+  
+\begin{checklist}{Engine Start}
+  \condition{First R Engine, Repeat for L Engine:}{
+    \item{Starter}{On}
+    \item{Bus Volts}{15V Min}
+    \item{Gas Generator}{15\% Min}
+    \item{Condition Lever}{Run}
+    \item{ITT}{Less than 1090C}
+    \item{Starter}{Off at 52\% Ng}
+    \item{Ignition}{Off}
+    \item{Engine Instruments}{Check}
+    \item{Generator}{On}
+    \item{Generator Load}{Below  60 in 2min}
+    \item{Bus Volts}{28V}
+    \item{Battery Temperature}{Below 120F}
+  }
+\end{checklist}
+
+\begin{checklist}{After Start}
+  \item{Lights}{As Req}
+  \item{Weather Radar}{Off/Standby}
+  \item{Avionics}{On}
+  \item{Inverter}{Main}
+  \item{INVTR FAIL Annun}{Extinquished}
+  \item{Cabin Temp \& Mode}{As Desired}
+  \item{Parking Brake}{Release}
+  \item{Brakes}{Check}
+\end{checklist}
+
+\begin{checklist}{Engine Runup}
+  \item{Parking Brake}{Set}
+  \item{Annunciators}{Test \& Consider}
+  \item{Remote Compass}{Slaved \& Aligned}
+  \item{Fuel Selectors}{Crossfeed}
+  \item{Wing Pumps}{On}
+  \item{Power Levers}{2050 RPM}
+  \item{Prop Gov Test}{2000 RPM}
+  \item{Power Levers}{2190 RPM}
+  \item{Exercise Left Propeller}{To 1050 RPM}
+  \item{Exercise Right Propeller}{To 1050 RPM}
+  \item{Fire Detector}{Test}
+  
+  \item{Left Generator}{Hold Reset}
+  \item{Left Generator Load}{0}
+  \item{Right Generator}{Hold Reset}
+  \item{Right Generator Load}{0}
+  \item{Gen. Load Sharing}{-40A Total, $\pm$2A/Side}
+  \item{Power Levers}{Idle}
+  \item{Oil Doors}{Open}
+  \item{Ice Deflectors}{On}
+  \item{Instrument Air}{Green \& No Lights}
+  
+  \condition{Pressurization Test:}{
+    \item{Cockpit Window}{Closed}
+    \item{Cabin Altitude}{Field Elevator}
+    \item{Cabin Differential}{Zero}
+    \item{Cabin Climb Rate}{10 O'Clock}
+    \item{Cabin Altitude Goal}{1000ft below}
+    \item{Cabin Pressure Mode}{Test}
+    \item{Cabin Alt, Diff \& Climb}{Observe Descent}
+    \item{Cabin Altitude Goal}{Set Cruise Alt}
+    \item{Cabin Press Mode}{Normal}
+  }
+\end{checklist}
+\begin{checklist}{}  
+  \condition{Anti-Ice Test:}{
+    \item{ICE DR ON Annun}{Both On}
+    \item{Ice Deflectors}{As Req}
+    \item{Prop Heat}{On}
+    \item{Prop Heat Gnd Test}{Hold}
+    \item{Propeller Amps}{14-28A \& Cycles}
+    \item{Propeller Heat}{Off}
+    \item{Windshield Heat}{On, Verify Amp Inc}
+    \item{Windshield Volts}{220-260V}
+    \item{Windshield Heat}{Off}
+    \item{Left Pitot Heat}{On, Verify Amp Inc}
+    \item{Right Pitot Heat}{On, Verify Amp Inc}
+    \item{L Fuel Vent Heat}{On, Verify Amp Inc}
+    \item{R Fuel Vent Heat}{On, Verify Amp Inc}
+    \item{Heating Switches}{Off}
+    \item{Surface De-ice}{Manual}
+    \item{Boot Pressure}{15-20 psi}
+    \item{Surface De-ice}{Single Cycle}
+    \item{Boot Pressure}{15-20 psi}
+    \item{Surface De-ice}{Off}
+  }
+  
+  \item{Fuel Selectors}{On}
+  \condition{Autopilot Test:}{
+    \item{Pitch Trim Power}{On}
+    \item{Electric Trim}{Exercise}
+    \item{Autopilot}{Test}
+    \item{Heading Bug}{30 Degrees Left}
+    \item{Autopilot Master}{Engage}
+    \item{Heading Mode}{Engage}
+    \item{Yoke Movement}{Observe}
+    \item{Flight Director}{Bank Left}
+    \item{Heading Bug}{30 Degrees Right}
+    \item{Yoke Movement}{Observe}
+    \item{Flight Director}{Bank Right}
+    \item{Autopilot}{Off}
+    \item{Flight Director}{Off}
+    \item{Elevator Trim}{Set Takeoff}
+  }
+\end{checklist}
+\begin{checklist}{}    
+  \item{Flaps}{Check Operation}
+  \item{Flaps}{Set Takeoff}
+  \item{Window}{Closed}
+  \item{CABIN DOOR Annun}{Extinguished}
+  \item{Ignition}{As Req}
+  \item{Flight Controls}{Free \& Correct}
+  \item{Altimeter}{Set}
+  \item{Departure Altitude}{Set}
+  \item{Takeoff Heading}{Set}
+  \item{Panel Lights}{Dim for Takeoff}
+  \item{Parking Brake}{Release}
+\end{checklist}
+
+\begin{checklist}{Before Takeoff}
+  \item{Oil Temperature}{100F Minimum}
+  \item{Battery Temperature}{Below 120F}
+  \item{Air Conditioning}{Off}
+  \item{Lighting}{As Desired}
+  \item{Transponder}{Alt Mode}
+  \item{Weather Radar}{On}
+\end{checklist}
+
+\begin{checklist}{Takeoff}
+  \item{Power Levers}{1260 ft-lbs}
+  \item{Brakes}{Release}
+  \item{Engine Instruments}{Check}
+  \item{ITT}{Less than 850C}
+  \item{Landing Gear}{Up at Positive Rate}
+  \item{Flaps}{Retract at 120kts}
+  \item{Autopilot}{Engage}
+  \item{Cabin Alt, Diff \& Climb}{Observe Climb}
+  \item{Landing Lights}{Off}
+\end{checklist}
+
+\begin{checklist}{Max Continuous Power}
+  \item{Ignition}{Auto/Off}
+  \item{Oil Doors}{Open}
+  \item{Propeller}{2190 RPM}
+  \item{Power Levers}{1260 ft-lbs}
+  \item{Ice Deflectors}{As Req}
+  \item{Cabin Temp \& Mode}{As Desired}
+\end{checklist}
+
+\begin{checklist}{Climb}
+  \item{Propellers}{2190 RPM}
+  \item{Power Levers}{1200 ft-lbs}
+  \item{Ignition}{Auto/Off}
+  \item{Oil Doors}{Closed}
+  \item{Ice Deflectors}{As Req}
+  \item{Cabin Pressure}{Monitor}
+  \item{Cabin Temp \& Mode}{As Desired}
+  \item{Engine Performance}{Monitor}
+  \condition{At Transition Altitude:}{
+    \item{Altimeters}{Standard}
+    \item{Recog Lights}{Off}
+  }
+\end{checklist}
+
+\begin{checklist}{Cruise}
+  \item{Ignition}{Auto/Off}
+  \item{Oil Doors}{Closed}
+  \item{Ice Deflectors}{As Req}
+  \item{Pitot Heat}{On if OAT less than 4C}
+  \item{Windshield Heat}{As Req}
+  \item{Propeller Heat}{As Req}
+  \item{Surface Deice}{As Req}
+  \item{Fuel Imbalance}{25 gal max}
+\end{checklist}
+\begin{checklist}{}  
+  \item{Propellers}{2000 RPM}
+  \item{Power Levers}{1150 ft-lbs}
+  \item{Cabin Temp \& Mode}{As Desired}
+  \item{Cabin Pressure}{Monitor}
+  \item{Engine Performance}{Monitor}
+\end{checklist}
+
+\begin{checklist}{Descent}
+  \item{Cabin Altitude Goal}{Set Destination Alt}
+  \item{Ignition}{Auto/Off}
+  \item{Oil Doors}{Closed}
+  \item{Ice Deflectors}{As Req}
+  \item{Power Levers}{Reduce}
+  \item{Engine Performance}{Monitor}
+  \item{Ice Protection}{As Req}
+\end{checklist}
+
+\begin{checklist}{Approach}
+  \item{Seats \& Seatbelts}{Secure}
+  \item{Cabin Alt, Diff \& Climb}{Check Progress}
+  \item{Fuel Selectors}{On}
+  \item{Fuel Imbalance}{25 gal max}
+  \item{Recog Lights}{On}
+  \item{Pitot Heat}{On if OAT less than 4C}
+  \item{Windshield Heat}{Off}
+  \item{Propeller Heat}{Off}
+  \item{Cabin Temp \& Mode}{Off}
+  \item{Ignition}{Auto}
+  \item{Ice Deflectors}{As Req}
+  \item{Flaps}{Approach}
+\end{checklist}
+
+\begin{checklist}{Landing}
+  \item{Cabin Differential}{Zero}
+  \item{Wing Pumps}{On}
+  \item{Propellers}{2190 RPM}
+  \item{Oil Doors}{Open}
+  \item{Flaps}{As Req}
+  \item{Landing Gear}{Down \& Locked}
+  \item{Landing Lights}{On}
+  \item{Autopilot}{Disconnect}
+\end{checklist}
+
+\begin{checklist}{Balked Landing}
+  \item{Propellers}{2190 RPM}
+  \item{Power Levers}{1260 ft-lbs}
+  \item{Engine Performance}{Check}
+  \item{Landing Gear}{Up at Positive Rate}
+  \item{Flaps}{Retract at 120kts}
+\end{checklist}
+
+\begin{checklist}{After Landing}
+  \item{Ignition}{Off}
+  \item{Oil Doors}{Closed}
+  \item{Ice Deflectors}{As Req}
+  \item{Flaps}{Up}
+  \item{Cabin Alt, Diff \& Climb}{Verify Zero}
+  \item{Cabin Press Mode}{Dump}
+  \item{Weather Radar}{Off/Standby}
+  \item{Lights}{As Desired}
+  \item{Ice Protection}{All Off}
+  \item{Cabin Temp \& Mode}{As Desired}
+\end{checklist}
+
+\begin{checklist}{Shutdown \& Secure}
+  \item{Parking Brake}{Set}
+  \item{Avionics Switches}{Off}
+  \item{Electrical Switches}{Off}
+  \item{Generators}{Off}
+  \item{Power Levers}{Idle}
+  \item{Propellers}{Feather}
+  \item{Condition Lever}{Cut-off}
+  \item{Wing Pumps}{Off when Ng < 10\%}
+  \item{Battery Master}{Off}
+  \item{Batter Selector}{\#1}
+  \item{Brake Brake}{Release}
+  \item{Control Locks}{Install}
+\end{checklist}
+
+\end{document}
