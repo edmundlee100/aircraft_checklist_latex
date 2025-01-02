@@ -1,0 +1,171 @@
+\documentclass[sim-use]{checklist}
+
+\logo{logo_white/dehavilland.png}
+\title{Normal Checklist}
+\subtitle{De Havilland \\ DHC-2 Beaver}
+\version{Version: 1.0 \\ \today}
+%\makeatletter
+
+\begin{document}
+  
+
+\begin{checklist}{On Entering Aircraft}
+  \item{Ignition}{Off}
+  \item{Parking Brake}{Set}
+  \item{Controls}{Free}
+  \item{Trim}{As Req}
+  \item{All Switches}{Off}
+  \item{Generator}{On}
+  \item{Battery Master}{On}
+  \item{Fuel Quantity}{Check}
+  \item{Altimeter \& Clock}{Set}
+  \item{Nav Lights}{On}
+\end{checklist}
+  
+\begin{checklist}{Before Engine Start}
+  \item{Fire Guard}{In Position}
+  \item{Propeller Area}{Clear}
+  \item{All Switches}{Off}
+  \item{Throttle Lever}{1/4--1/2 in open}
+  \item{Propeller Lever}{Fully Decrease RPM}
+  \item{Mixture Lever}{Idle Cut-Off}
+  \item{Carburettor}{Cold}
+\end{checklist}
+
+\begin{checklist}{Starting Engine}
+  \item{Propeller Area}{Clear}
+  \item{Matter Master}{On}
+  \item{Fuel \& Oil Emergency Cut-off}{Open}
+  \item{Fuel Selector}{Fullest Tank}
+  \item{Mixture Lever}{Auto Rich}
+  \item{Throttle Lever}{1/4--1/2 in open}
+  \item{Fuel Pressure}{Wobble Pump to max 5 psi}
+  \item{Primer}{As Req}
+  \item{Ignition}{On Both}
+  \item{Starter Switch}{Hold to STARTER}
+  \item{Booster Coil}{Hold to BOOSTER COIL}
+  \condition{As soon as engine fires:} {
+    \item{Starter Switch}{Release}
+    \item{Booster Coil}{Release}
+    \item{Priming Pump}{Locked Off}
+    \item{Throttle}{500--800 RPM}
+  }
+  \condition{Oil pressure reaches 50 psi:} {
+    \item{Propeller Lever}{Full Increase RPM}
+  }
+  \item{Avionics Master}{On}
+\end{checklist}
+
+\begin{checklist}{Engine Warmup}
+  \item{Throttle}{1000 RPM}
+  \condition{Oil temperature reached 100F:} {
+    \item{Mixture Lever}{Full Rich}
+  }
+  \item{Oil Pressure}{Check}
+  \item{Fuel Pressure}{Check}
+  \item{Fuel Temperature}{Check}
+  \item{Tank Feeds}{Check by Rotating}
+\end{checklist}
+
+\begin{checklist}{Engine Ground Tests}
+  \item{Parking Brake}{On}
+  \item{Control Column}{Fully Back}
+  \item{Fuel Selector}{Fullest Tank}
+  \item{Propeller Lever}{Full Increase RPM}
+  \item{Throttle}{1750 RPM}
+  \item{Magneto}{Check L/R, Drop <100 RPM}
+  \item{Throttle}{600 RPM}
+  \item{Ignition Switch}{Momentarily Check Off}
+  \condition{Open throttle until manifold pressure is equal to aerodrome pressure:} {
+    \item{Generator}{Cuts in at 1400 RPM}
+    \item{RPM}{Approx 2100 RPM}
+  }
+  \item{Throttle}{1600 RPM}
+  \item{Propeller}{Cycle check}
+\end{checklist}
+
+\begin{checklist}{Taxi}
+  \item{Flaps}{Cruise Poosition}
+  \item{Propeller}{Full Increase RPM}
+  \item{Oil \& Cylinder Temperature}{Check}
+  \item{Brake Test}{Check}
+  \item{Steering}{Check}
+  \item{Throttle}{1200--1400 RPM when stopped}
+\end{checklist}
+
+\begin{checklist}{Takeoff Check}
+  \item{Doors \& Windows}{Closed}
+  \item{Trim}{As Req}
+  \item{Mixture Lever}{Auto Rich}
+  \item{Propeller Lever}{Increase RPM}
+  \item{Fuel Selector}{As Req}
+  \item{Flaps}{Takeoff Position}
+  \item{Gyro}{Uncaged \& Set}
+  \item{Pitot Heat}{As Req}
+  \item{Carburettor Heat}{Cold}
+\end{checklist}
+
+\begin{checklist}{Takeoff}
+  \item{Cylinder Head Temperature}{<450F}
+  \item{Throttle}{Max Takeoff Power}
+  \item{Rotate}{55--65 MPH}
+  \item{Climb}{65 MPH}
+  \condition{Safe height attained:} {
+    \item{Power (fully loaded)}{33.5 IN HG / 2200 RPM}
+    \item{Power (normal weight)}{30 IN HG / 2000 RPM}
+    \item{Airspeed}{80 MPH}
+  }
+  \condition{500 FT Altitude:} {
+    \item{Flaps}{Climb}
+  }
+\end{checklist}
+
+\begin{checklist}{Climb}
+  \condition{For Maximum Continuous Power if Required:} {
+    \item{Power}{33.5 IN HG / 2200 RPM}
+    \item{Best Rate of Climb}{95 MPH}
+    \item{Best Angle of Climb}{80 MPH}
+  }
+\end{checklist}
+
+\begin{checklist}{Cruise}
+  \item{Flaps}{Cruise}
+  \item{Throttle}{<29.7 IN HG}
+  \item{Propeller Lever}{<2000 RPM}
+  \item{Mixture Lever}{Auto Lean}
+\end{checklist}
+
+\begin{checklist}{Descent}
+  \item{Airspeed \& Power}{As Req}
+  \item{Fuel Selector}{Fullest Tank}
+  \item{Instrument}{Check}
+\end{checklist}
+
+\begin{checklist}{Approach}
+  \item{Airspeed}{90 MPH}
+  \item{Propeller Lever}{Increase RPM}
+  \item{Mixture Lever}{Auto Rich}
+  \item{Flaps}{Landing or As Req}
+  \item{Normal Approach Speed}{80 MPH}
+  \item{Short Field Approach Speed}{65--68 MPH}
+  \item{Carburettor Heat}{Cold on Final Approach}
+\end{checklist}
+
+\begin{checklist}{After Landing}
+  \item{Flaps}{Cruise}
+  \item{Trim}{Neutral}
+  \item{Carburettor Heat}{Cold}
+\end{checklist}
+
+\begin{checklist}{Shutdown}
+  \item{Parking Brake}{Set}
+  \item{Avionics}{Off}
+  \item{Throttle}{1000--1200 RPM}
+  \item{Propeller Lever}{Full Decrease RPM}
+  \item{Mixture Lever}{Idle Cutoff}
+  \item{Ignition}{Off}
+  \item{Fuel Selector}{Off}
+  \item{All Switches (except Generator)}{Off}
+\end{checklist}
+
+\end{document}
